@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT|| 4001;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,6 +17,6 @@ app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 })
 
-app.listen(PORT,()=>{
+app.listen(PORT,function(){
     console.log(`server is running on port: ${PORT}`);
 });
