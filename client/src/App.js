@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Card Maker</h1>
+      <h1>Card Maker API</h1>
       </header>
     </div>
   );
