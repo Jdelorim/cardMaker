@@ -13,6 +13,9 @@ app.use(bodyParser.json());
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
 }
+app.get("*",(req,re)=>{
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+})
 
 app.listen(PORT,()=>{
     console.log(`server is running on port: ${PORT}`);
